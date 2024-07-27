@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Riddle Code Input</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="congratsMessage">Gratulacje!</div> <!-- Congrats message -->
+    <div class="container" id="inputContainer">
+        <h1>Wpisz swój klucz</h1>
+        <input type="text" id="codeInput" placeholder="Wpisz tutaj swój klucz">
+        <button onclick="redirectToRiddle()">Sprawdź</button>
+        <div class="error" id="errorMessage" style="display: none;">Nieprawidłowy kod, spróbuj ponownie.</div>
+        <div class="timer" id="timer"></div>
+    </div>
+    <div class="container" id="riddleContainer" style="display: none;">
+        <div class="riddle" id="riddleDisplay"></div>
+        <button class="back-arrow" onclick="goBack()">&#8592;</button> <!-- Unicode left arrow -->
+    </div>
+    <div class="container question-container" id="questionContainer">
+        <h1>Co najbardziej skupia uwagę w okolicy Grodu na Górze birów?</h1>
+        <input type="text" id="answerInput" placeholder="Wpisz swoją odpowiedź">
+        <button onclick="checkAnswer()">Sprawdź</button>
+        <div class="response" id="responseDisplay" style="display: none;"></div>
+        <button class="back-arrow" onclick="goBackFromQuestion()">&#8592;</button> <!-- Unicode left arrow -->
+    </div>
+    <div id="fireworks"></div> <!-- Fireworks container -->
+    <div id="flash"></div> <!-- Flash effect -->
+
+    <script src="script.js"></script>
+</body>
+</html>
